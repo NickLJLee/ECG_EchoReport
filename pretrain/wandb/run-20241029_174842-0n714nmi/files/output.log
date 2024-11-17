@@ -1,0 +1,27 @@
+create directory "../checkpoints/" for save checkpoint!
+---------------------------
+#########################################
+Be patient..., checking checkpoint now...
+Start training from 0 epoch
+#########################################
+training start!
+/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:91: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0%|                                                                                                                                                                                                                                                | 0/13 [00:02<?, ?it/s]
+  0%|                                                                                                                                                                                                                                                | 0/21 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+    ddp_main()
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+    trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 109, in train_w_TextEmb
+    report = data['raw_text']
+KeyError: 'raw_text'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+[rank0]:     ddp_main()
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+[rank0]:     trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 109, in train_w_TextEmb
+[rank0]:     report = data['raw_text']
+[rank0]: KeyError: 'raw_text'

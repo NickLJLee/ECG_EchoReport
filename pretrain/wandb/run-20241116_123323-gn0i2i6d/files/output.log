@@ -1,0 +1,94 @@
+directory "../checkpoints/" existing for save checkpoint!
+#########################################
+Be patient..., checking checkpoint now...
+Start training from 0 epoch
+#########################################
+training start!
+/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:91: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0%|                                                     | 0/51 [00:00<?, ?it/s]/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:117: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():                                        | 0/13 [00:00<?, ?it/s]
+loss is 27.93708038330078, acc1 is 0.048828125, acc5 is 0.439453125, cma_loss is 13.936698913574219, uma_loss is 14.000381469726562
+100%|████████████████████████████████████████████| 13/13 [00:06<00:00,  1.98it/s]
+100%|██████████████████████████████████████████████| 1/1 [00:01<00:00,  1.59s/it]
+loss is 27.93796157836914, acc1 is 0.048828125, acc5 is 0.29296875, cma_loss is 14.201396942138672, uma_loss is 13.736564636230469
+loss is 28.369722366333008, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 14.85675048828125, uma_loss is 13.512971878051758
+loss is 27.661174774169922, acc1 is 0.09765625, acc5 is 0.48828125, cma_loss is 14.291996002197266, uma_loss is 13.369178771972656
+loss is 26.1832218170166, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.888427734375, uma_loss is 12.294794082641602
+loss is 25.12677764892578, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 13.944480895996094, uma_loss is 11.182296752929688
+loss is 24.385089874267578, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 13.914207458496094, uma_loss is 10.470882415771484
+loss is 23.725921630859375, acc1 is 0.048828125, acc5 is 0.5859375, cma_loss is 13.894977569580078, uma_loss is 9.830944061279297
+loss is 23.282691955566406, acc1 is 0.09765625, acc5 is 0.48828125, cma_loss is 13.880077362060547, uma_loss is 9.40261459350586
+loss is 23.073015213012695, acc1 is 0.146484375, acc5 is 0.537109375, cma_loss is 13.870109558105469, uma_loss is 9.202905654907227
+loss is 22.748706817626953, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.86810302734375, uma_loss is 8.880602836608887
+loss is 22.4197998046875, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 13.868762969970703, uma_loss is 8.55103588104248
+loss is 22.090721130371094, acc1 is 0.048828125, acc5 is 0.5859375, cma_loss is 13.870285034179688, uma_loss is 8.220437049865723
+start validation
+100%|██████████████████████████████████████████████| 2/2 [00:00<00:00, 85.50it/s]
+0 epoch loss is 3.094684618995303,                                    acc1 is 0.08638822115384616, acc5 is 0.4807692307692308
+***********************************
+zeroshot classification set is I313_I314
+  0%|                                                      | 0/6 [00:01<?, ?it/s]
+['The effusion appears circumferential. The effusion is echo dense, consistent with blood.', 'no The effusion appears circumferential. The effusion is echo dense, consistent with blood.']
+['consistent with impaired fillling/tamponade physiology', 'no consistent with impaired fillling/tamponade physiology']
+  0%|                                                     | 0/51 [00:10<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+    ddp_main()
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+    trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 219, in train_w_TextEmb
+    zeroshot_eval(model=self.model,
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 228, in zeroshot_eval
+    pred = get_ecg_emd(model.module, test_dataloader, zeroshot_weights, device=device, softmax_eval=True)
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 93, in get_ecg_emd
+    ecg_emb = model.ext_ecg_emb(ecg)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+    return func(*args, **kwargs)
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_builder.py", line 173, in ext_ecg_emb
+    ecg_emb = self.ecg_encoder(ecg)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/resnet1d.py", line 87, in forward
+    out = torch.relu(self.bn1(self.conv1(x)))
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 308, in forward
+    return self._conv_forward(input, self.weight, self.bias)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 304, in _conv_forward
+    return F.conv1d(input, weight, bias, self.stride,
+RuntimeError: Given groups=1, weight of size [64, 1, 7], expected input[256, 12, 5000] to have 1 channels, but got 12 channels instead
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+[rank0]:     ddp_main()
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+[rank0]:     trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 219, in train_w_TextEmb
+[rank0]:     zeroshot_eval(model=self.model,
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 228, in zeroshot_eval
+[rank0]:     pred = get_ecg_emd(model.module, test_dataloader, zeroshot_weights, device=device, softmax_eval=True)
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 93, in get_ecg_emd
+[rank0]:     ecg_emb = model.ext_ecg_emb(ecg)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 116, in decorate_context
+[rank0]:     return func(*args, **kwargs)
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_builder.py", line 173, in ext_ecg_emb
+[rank0]:     ecg_emb = self.ecg_encoder(ecg)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/resnet1d.py", line 87, in forward
+[rank0]:     out = torch.relu(self.bn1(self.conv1(x)))
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 308, in forward
+[rank0]:     return self._conv_forward(input, self.weight, self.bias)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/conv.py", line 304, in _conv_forward
+[rank0]:     return F.conv1d(input, weight, bias, self.stride,
+[rank0]: RuntimeError: Given groups=1, weight of size [64, 1, 7], expected input[256, 12, 5000] to have 1 channels, but got 12 channels instead

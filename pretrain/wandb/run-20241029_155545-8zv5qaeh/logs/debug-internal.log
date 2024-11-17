@@ -1,0 +1,20 @@
+{"time":"2024-10-29T15:55:45.040052496+08:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-10-29T15:55:45.040065621+08:00","level":"INFO","msg":"created symlink","path":"/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/wandb/run-20241029_155545-8zv5qaeh/logs/debug-core.log"}
+{"time":"2024-10-29T15:55:45.061796185+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-29T15:55:45.068463529+08:00","level":"INFO","msg":"created new stream","id":"8zv5qaeh"}
+{"time":"2024-10-29T15:55:45.06851854+08:00","level":"INFO","msg":"stream: started","id":"8zv5qaeh"}
+{"time":"2024-10-29T15:55:45.068540272+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"8zv5qaeh"}}
+{"time":"2024-10-29T15:55:45.068564319+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"8zv5qaeh"}}
+{"time":"2024-10-29T15:55:45.068533832+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"8zv5qaeh"}}
+{"time":"2024-10-29T15:55:45.72254791+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-29T15:55:45.724036733+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-29T15:55:46.357663167+08:00","level":"INFO","msg":"stream: closing","id":"8zv5qaeh"}
+{"time":"2024-10-29T15:55:46.357723734+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-29T15:55:46.360446122+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-29T15:55:48.7072855+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-29T15:55:48.87103881+08:00","level":"INFO","msg":"api: retrying error","error":"Post \"https://api.wandb.ai/files/nickljlee/ECG_EchoReport/8zv5qaeh/file_stream\": EOF"}
+{"time":"2024-10-29T15:55:51.360369415+08:00","level":"ERROR","msg":"monitor: gpu: timeout waiting for process to exit"}
+{"time":"2024-10-29T15:55:51.892428012+08:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"8zv5qaeh"}}
+{"time":"2024-10-29T15:55:51.892510901+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"8zv5qaeh"}}
+{"time":"2024-10-29T15:55:51.892536745+08:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"8zv5qaeh"}}
+{"time":"2024-10-29T15:55:51.892687629+08:00","level":"INFO","msg":"stream: closed","id":"8zv5qaeh"}

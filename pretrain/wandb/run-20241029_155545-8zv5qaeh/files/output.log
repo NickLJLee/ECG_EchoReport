@@ -1,0 +1,106 @@
+urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+    retries = retries.increment(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /ncbi/MedCPT-Query-Encoder/resolve/main/config.json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+    ddp_main()
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 68, in ddp_main
+    model = utils_builder.ECGCLIP(config['network'])
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_builder.py", line 146, in __init__
+    self.lm_model = AutoModel.from_pretrained(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+    resolved_config_file = cached_file(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+    resolved_file = hf_hub_download(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1240, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1303, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, head_call_error) = _get_metadata_or_catch_error(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1752, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1674, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 376, in _request_wrapper
+    response = _request_wrapper(
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 399, in _request_wrapper
+    response = get_session().request(method=method, url=url, **params)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 66, in send
+    return super().send(request, *args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/requests/adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /ncbi/MedCPT-Query-Encoder/resolve/main/config.json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))"), '(Request ID: 59f342d1-4cca-41db-9715-e447ee22f01a)')
+[rank0]: urllib3.exceptions.SSLError: [SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)
+
+[rank0]: The above exception was the direct cause of the following exception:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/requests/adapters.py", line 667, in send
+[rank0]:     resp = conn.urlopen(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/urllib3/connectionpool.py", line 843, in urlopen
+[rank0]:     retries = retries.increment(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/urllib3/util/retry.py", line 519, in increment
+[rank0]:     raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+[rank0]: urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /ncbi/MedCPT-Query-Encoder/resolve/main/config.json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))
+
+[rank0]: During handling of the above exception, another exception occurred:
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+[rank0]:     ddp_main()
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 68, in ddp_main
+[rank0]:     model = utils_builder.ECGCLIP(config['network'])
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_builder.py", line 146, in __init__
+[rank0]:     self.lm_model = AutoModel.from_pretrained(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/transformers/models/auto/auto_factory.py", line 487, in from_pretrained
+[rank0]:     resolved_config_file = cached_file(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/transformers/utils/hub.py", line 403, in cached_file
+[rank0]:     resolved_file = hf_hub_download(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+[rank0]:     return f(*args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1240, in hf_hub_download
+[rank0]:     return _hf_hub_download_to_cache_dir(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1303, in _hf_hub_download_to_cache_dir
+[rank0]:     (url_to_download, etag, commit_hash, expected_size, head_call_error) = _get_metadata_or_catch_error(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1752, in _get_metadata_or_catch_error
+[rank0]:     metadata = get_hf_file_metadata(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+[rank0]:     return fn(*args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1674, in get_hf_file_metadata
+[rank0]:     r = _request_wrapper(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 376, in _request_wrapper
+[rank0]:     response = _request_wrapper(
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 399, in _request_wrapper
+[rank0]:     response = get_session().request(method=method, url=url, **params)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/requests/sessions.py", line 589, in request
+[rank0]:     resp = self.send(prep, **send_kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/requests/sessions.py", line 703, in send
+[rank0]:     r = adapter.send(request, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/huggingface_hub/utils/_http.py", line 66, in send
+[rank0]:     return super().send(request, *args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/requests/adapters.py", line 698, in send
+[rank0]:     raise SSLError(e, request=request)
+[rank0]: requests.exceptions.SSLError: (MaxRetryError("HTTPSConnectionPool(host='huggingface.co', port=443): Max retries exceeded with url: /ncbi/MedCPT-Query-Encoder/resolve/main/config.json (Caused by SSLError(SSLEOFError(8, '[SSL: UNEXPECTED_EOF_WHILE_READING] EOF occurred in violation of protocol (_ssl.c:1007)')))"), '(Request ID: 59f342d1-4cca-41db-9715-e447ee22f01a)')

@@ -1,0 +1,73 @@
+directory "../checkpoints/" existing for save checkpoint!
+#########################################
+Be patient..., checking checkpoint now...
+Start training from 0 epoch
+#########################################
+training start!
+/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:91: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0%|                                                                                                                                                                                                                                                                                                                                            | 0/51 [00:00<?, ?it/s]/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:117: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():                                                                                                                                                                                                                                                                                                                               | 0/13 [00:00<?, ?it/s]
+loss is 27.88440704345703, acc1 is 0.146484375, acc5 is 0.5859375, cma_loss is 13.926029205322266, uma_loss is 13.958377838134766
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:08<00:00,  1.53it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.96s/it]
+loss is 28.065845489501953, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.490913391113281, uma_loss is 13.574932098388672
+loss is 26.359834671020508, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 14.190624237060547, uma_loss is 12.169210433959961
+loss is 25.555652618408203, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.85409164428711, uma_loss is 10.701560974121094
+loss is 23.333234786987305, acc1 is 0.09765625, acc5 is 0.5859375, cma_loss is 13.90494155883789, uma_loss is 9.428293228149414
+loss is 22.328262329101562, acc1 is 0.09765625, acc5 is 0.48828125, cma_loss is 13.902305603027344, uma_loss is 8.425956726074219
+loss is 21.94822120666504, acc1 is 0.1953125, acc5 is 0.537109375, cma_loss is 13.942890167236328, uma_loss is 8.005331039428711
+loss is 21.555021286010742, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.917095184326172, uma_loss is 7.63792610168457
+loss is 21.161212921142578, acc1 is 0.048828125, acc5 is 0.634765625, cma_loss is 13.88497543334961, uma_loss is 7.276236534118652
+loss is 20.843162536621094, acc1 is 0.1953125, acc5 is 0.5859375, cma_loss is 13.87276840209961, uma_loss is 6.970395088195801
+loss is 20.368377685546875, acc1 is 0.09765625, acc5 is 0.390625, cma_loss is 13.871841430664062, uma_loss is 6.4965362548828125
+loss is 19.921634674072266, acc1 is 0.1953125, acc5 is 0.78125, cma_loss is 13.871578216552734, uma_loss is 6.050055503845215
+loss is 19.706401824951172, acc1 is 0.048828125, acc5 is 0.390625, cma_loss is 13.874794006347656, uma_loss is 5.831608772277832
+start validation
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 142.61it/s]
+0 epoch loss is 2.8479168483189174,                                    acc1 is 0.11643629807692307, acc5 is 0.5408653846153846
+***********************************
+zeroshot classification set is I313_I314
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:02<00:00,  2.85it/s]
+  0%|                                                                                                                                                                                                                                                                                                                                            | 0/51 [00:18<?, ?it/s]
+-----------------------------------
+The average AUROC is 68.8362
+The AUROC of I313 is 56.19
+The AUROC of I314 is 81.48
+-----------------------------------
+The average Sensitivity is 94.4444
+The Sensitivity of I313 is 88.89
+The Sensitivity of I314 is 100.00
+-----------------------------------
+The average Specificity is 54.9708
+The Specificity of I313 is 40.79
+The Specificity of I314 is 69.15
+-----------------------------------
+The average Youden Index is 49.4153
+The Youden Index of I313 is 29.68
+The Youden Index of I314 is 69.15
+***********************************
+Traceback (most recent call last):
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+    ddp_main()
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+    trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 219, in train_w_TextEmb
+    zeroshot_eval(model=self.model,
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 123, in zeroshot_eval
+    target_class = [prompt_dict[i] for i in class_name]
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 123, in <listcomp>
+    target_class = [prompt_dict[i] for i in class_name]
+KeyError: 'diag'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+[rank0]:     ddp_main()
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+[rank0]:     trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 219, in train_w_TextEmb
+[rank0]:     zeroshot_eval(model=self.model,
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 123, in zeroshot_eval
+[rank0]:     target_class = [prompt_dict[i] for i in class_name]
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 123, in <listcomp>
+[rank0]:     target_class = [prompt_dict[i] for i in class_name]
+[rank0]: KeyError: 'diag'

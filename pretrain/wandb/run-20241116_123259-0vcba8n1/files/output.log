@@ -1,0 +1,60 @@
+directory "../checkpoints/" existing for save checkpoint!
+#########################################
+Be patient..., checking checkpoint now...
+Start training from 0 epoch
+#########################################
+training start!
+/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:91: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0%|                                                     | 0/51 [00:00<?, ?it/s]/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:117: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():                                        | 0/13 [00:00<?, ?it/s]
+  0%|                                                     | 0/13 [00:02<?, ?it/s]
+  0%|                                                     | 0/51 [00:02<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+    ddp_main()
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+    trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 125, in train_w_TextEmb
+    output_dict = self.model(ecg, input_ids, attention_mask)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1636, in forward
+    else self._run_ddp_forward(*inputs, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1454, in _run_ddp_forward
+    return self.module(*inputs, **kwargs)  # type: ignore[index]
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_builder.py", line 209, in forward
+    proj_ecg_emb = self.proj_e(ecg_emb)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1729, in __getattr__
+    raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+AttributeError: 'ECGCLIP' object has no attribute 'proj_e'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+[rank0]:     ddp_main()
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+[rank0]:     trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 125, in train_w_TextEmb
+[rank0]:     output_dict = self.model(ecg, input_ids, attention_mask)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1636, in forward
+[rank0]:     else self._run_ddp_forward(*inputs, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/parallel/distributed.py", line 1454, in _run_ddp_forward
+[rank0]:     return self.module(*inputs, **kwargs)  # type: ignore[index]
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1553, in _wrapped_call_impl
+[rank0]:     return self._call_impl(*args, **kwargs)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1562, in _call_impl
+[rank0]:     return forward_call(*args, **kwargs)
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_builder.py", line 209, in forward
+[rank0]:     proj_ecg_emb = self.proj_e(ecg_emb)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1729, in __getattr__
+[rank0]:     raise AttributeError(f"'{type(self).__name__}' object has no attribute '{name}'")
+[rank0]: AttributeError: 'ECGCLIP' object has no attribute 'proj_e'. Did you mean: 'proj_t'?

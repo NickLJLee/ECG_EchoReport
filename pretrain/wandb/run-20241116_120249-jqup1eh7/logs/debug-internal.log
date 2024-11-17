@@ -1,0 +1,14 @@
+{"time":"2024-11-16T12:02:49.790430426+08:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-11-16T12:02:49.790464561+08:00","level":"INFO","msg":"created symlink","path":"/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/wandb/run-20241116_120249-jqup1eh7/logs/debug-core.log"}
+{"time":"2024-11-16T12:02:49.916771935+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-11-16T12:02:49.92267011+08:00","level":"INFO","msg":"created new stream","id":"jqup1eh7"}
+{"time":"2024-11-16T12:02:49.922715205+08:00","level":"INFO","msg":"stream: started","id":"jqup1eh7"}
+{"time":"2024-11-16T12:02:49.922733233+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"jqup1eh7"}}
+{"time":"2024-11-16T12:02:49.922753716+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"jqup1eh7"}}
+{"time":"2024-11-16T12:02:49.922765408+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"jqup1eh7"}}
+{"time":"2024-11-16T12:02:50.601510078+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-11-16T12:02:50.603282178+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-16T12:02:54.073886144+08:00","level":"INFO","msg":"stream: closing","id":"jqup1eh7"}
+{"time":"2024-11-16T12:02:54.073911047+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-16T12:02:54.07677652+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-16T12:02:55.253013311+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

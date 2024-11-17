@@ -1,0 +1,73 @@
+directory "../checkpoints/" existing for save checkpoint!
+#########################################
+Be patient..., checking checkpoint now...
+Start training from 0 epoch
+#########################################
+training start!
+/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:91: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0%|                                                                                                                                                                                   | 0/51 [00:00<?, ?it/s]/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:117: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():                                                                                                                                                                      | 0/13 [00:00<?, ?it/s]
+loss is 27.88440704345703, acc1 is 0.146484375, acc5 is 0.5859375, cma_loss is 13.926029205322266, uma_loss is 13.958377838134766
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:06<00:00,  1.95it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.76s/it]
+loss is 28.065919876098633, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.490957260131836, uma_loss is 13.574962615966797
+loss is 26.359731674194336, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 14.190624237060547, uma_loss is 12.169107437133789
+loss is 25.556015014648438, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.85400390625, uma_loss is 10.702011108398438
+loss is 23.33247947692871, acc1 is 0.09765625, acc5 is 0.5859375, cma_loss is 13.904949188232422, uma_loss is 9.427530288696289
+loss is 22.32721710205078, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.90212631225586, uma_loss is 8.425090789794922
+loss is 21.94891357421875, acc1 is 0.1953125, acc5 is 0.537109375, cma_loss is 13.942962646484375, uma_loss is 8.005950927734375
+loss is 21.55573081970215, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.9171142578125, uma_loss is 7.638616561889648
+loss is 21.16332244873047, acc1 is 0.048828125, acc5 is 0.634765625, cma_loss is 13.884986877441406, uma_loss is 7.2783355712890625
+loss is 20.844636917114258, acc1 is 0.1953125, acc5 is 0.5859375, cma_loss is 13.872638702392578, uma_loss is 6.97199821472168
+loss is 20.370098114013672, acc1 is 0.09765625, acc5 is 0.48828125, cma_loss is 13.871772766113281, uma_loss is 6.498326301574707
+loss is 19.923377990722656, acc1 is 0.1953125, acc5 is 0.830078125, cma_loss is 13.871532440185547, uma_loss is 6.051844596862793
+loss is 19.70777130126953, acc1 is 0.048828125, acc5 is 0.390625, cma_loss is 13.874649047851562, uma_loss is 5.833122253417969
+start validation
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 71.61it/s]
+0 epoch loss is 2.847996393839518,                                    acc1 is 0.11643629807692307, acc5 is 0.5558894230769231
+***********************************
+zeroshot classification set is I313_I314
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:01<00:00,  3.22it/s]
+  0%|                                                                                                                                                                                   | 0/51 [00:13<?, ?it/s]
+-----------------------------------
+The average AUROC is 68.6729
+The AUROC of I313 is 55.76
+The AUROC of I314 is 81.59
+-----------------------------------
+The average Sensitivity is 94.4444
+The Sensitivity of I313 is 88.89
+The Sensitivity of I314 is 100.00
+-----------------------------------
+The average Specificity is 54.8371
+The Specificity of I313 is 40.32
+The Specificity of I314 is 69.35
+-----------------------------------
+The average Youden Index is 49.2815
+The Youden Index of I313 is 29.21
+The Youden Index of I314 is 69.35
+***********************************
+Traceback (most recent call last):
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+    ddp_main()
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+    trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 219, in train_w_TextEmb
+    zeroshot_eval(model=self.model,
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 123, in zeroshot_eval
+    target_class = [prompt_dict[i] for i in class_name]
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 123, in <listcomp>
+    target_class = [prompt_dict[i] for i in class_name]
+KeyError: 'I26'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+[rank0]:     ddp_main()
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+[rank0]:     trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 219, in train_w_TextEmb
+[rank0]:     zeroshot_eval(model=self.model,
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 123, in zeroshot_eval
+[rank0]:     target_class = [prompt_dict[i] for i in class_name]
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 123, in <listcomp>
+[rank0]:     target_class = [prompt_dict[i] for i in class_name]
+[rank0]: KeyError: 'I26'

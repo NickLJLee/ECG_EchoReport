@@ -1,0 +1,13 @@
+{"time":"2024-11-16T11:58:34.722446269+08:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-11-16T11:58:34.722477339+08:00","level":"INFO","msg":"created symlink","path":"/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/wandb/run-20241116_115834-00l33137/logs/debug-core.log"}
+{"time":"2024-11-16T11:58:34.837176043+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-11-16T11:58:34.846886495+08:00","level":"INFO","msg":"created new stream","id":"00l33137"}
+{"time":"2024-11-16T11:58:34.846921931+08:00","level":"INFO","msg":"stream: started","id":"00l33137"}
+{"time":"2024-11-16T11:58:34.84695838+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"00l33137"}}
+{"time":"2024-11-16T11:58:34.847017192+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"00l33137"}}
+{"time":"2024-11-16T11:58:34.847071413+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"00l33137"}}
+{"time":"2024-11-16T11:58:36.075804798+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-11-16T11:58:36.077415225+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-16T11:58:39.861804091+08:00","level":"INFO","msg":"stream: closing","id":"00l33137"}
+{"time":"2024-11-16T11:58:39.861839771+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-16T11:58:39.863826639+08:00","level":"INFO","msg":"Stopped system monitor"}

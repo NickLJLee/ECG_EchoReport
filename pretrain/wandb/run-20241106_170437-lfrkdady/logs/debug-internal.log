@@ -1,0 +1,10 @@
+{"time":"2024-11-06T17:04:37.669341241+08:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-11-06T17:04:37.669352303+08:00","level":"INFO","msg":"created symlink","path":"/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/wandb/run-20241106_170437-lfrkdady/logs/debug-core.log"}
+{"time":"2024-11-06T17:04:37.731721324+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-11-06T17:04:37.736784898+08:00","level":"INFO","msg":"created new stream","id":"lfrkdady"}
+{"time":"2024-11-06T17:04:37.736805746+08:00","level":"INFO","msg":"stream: started","id":"lfrkdady"}
+{"time":"2024-11-06T17:04:37.736831275+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"lfrkdady"}}
+{"time":"2024-11-06T17:04:37.736838011+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"lfrkdady"}}
+{"time":"2024-11-06T17:04:37.736818817+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"lfrkdady"}}
+{"time":"2024-11-06T17:04:39.609699545+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-11-06T17:04:39.610481413+08:00","level":"INFO","msg":"Starting system monitor"}

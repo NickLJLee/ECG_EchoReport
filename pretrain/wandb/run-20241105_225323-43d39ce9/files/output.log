@@ -1,0 +1,44 @@
+directory "../checkpoints/" existing for save checkpoint!
+#########################################
+Be patient..., checking checkpoint now...
+Start training from 0 epoch
+#########################################
+training start!
+/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:91: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0%|                                                                                                                                                                                                                                                                                                                                            | 0/51 [00:00<?, ?it/s]/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:117: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():                                                                                                                                                                                                                                                                                                                               | 0/13 [00:00<?, ?it/s]
+loss is 27.88440704345703, acc1 is 0.146484375, acc5 is 0.5859375, cma_loss is 13.926029205322266, uma_loss is 13.958377838134766
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:06<00:00,  1.89it/s]
+100%|█████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.58s/it]
+loss is 28.065988540649414, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.490945816040039, uma_loss is 13.575042724609375
+loss is 26.359588623046875, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 14.190597534179688, uma_loss is 12.168991088867188
+loss is 25.55525016784668, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.854118347167969, uma_loss is 10.701131820678711
+loss is 23.332561492919922, acc1 is 0.09765625, acc5 is 0.5859375, cma_loss is 13.905071258544922, uma_loss is 9.427490234375
+loss is 22.327075958251953, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.902294158935547, uma_loss is 8.424781799316406
+loss is 21.947998046875, acc1 is 0.1953125, acc5 is 0.537109375, cma_loss is 13.943023681640625, uma_loss is 8.004974365234375
+loss is 21.55495834350586, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.91717529296875, uma_loss is 7.637783050537109
+loss is 21.162158966064453, acc1 is 0.048828125, acc5 is 0.68359375, cma_loss is 13.885032653808594, uma_loss is 7.277125358581543
+loss is 20.843435287475586, acc1 is 0.1953125, acc5 is 0.5859375, cma_loss is 13.872833251953125, uma_loss is 6.970602035522461
+loss is 20.366493225097656, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.871818542480469, uma_loss is 6.494673728942871
+loss is 19.92129898071289, acc1 is 0.1953125, acc5 is 0.732421875, cma_loss is 13.871429443359375, uma_loss is 6.049868583679199
+loss is 19.707252502441406, acc1 is 0.048828125, acc5 is 0.390625, cma_loss is 13.87460708618164, uma_loss is 5.832644462585449
+start validation
+  0%|                                                                                                                                                                                                                                                                                                                                            | 0/51 [00:09<?, ?it/s]
+0 epoch loss is 2.847890163603283,                                    acc1 is 0.11643629807692307, acc5 is 0.5558894230769231
+Traceback (most recent call last):
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+    ddp_main()
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+    trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 216, in train_w_TextEmb
+    for set_name in args_zeroshot_eval['val_sets'].keys():
+KeyError: 'val_sets'
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+[rank0]:     ddp_main()
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+[rank0]:     trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 216, in train_w_TextEmb
+[rank0]:     for set_name in args_zeroshot_eval['val_sets'].keys():
+[rank0]: KeyError: 'val_sets'

@@ -1,0 +1,118 @@
+directory "../checkpoints/" existing for save checkpoint!
+#########################################
+Be patient..., checking checkpoint now...
+Start training from 0 epoch
+#########################################
+training start!
+/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:91: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0%|                                                                                                                                                                                   | 0/51 [00:00<?, ?it/s]/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:117: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():                                                                                                                                                                      | 0/13 [00:00<?, ?it/s]
+loss is 27.88440704345703, acc1 is 0.146484375, acc5 is 0.5859375, cma_loss is 13.926029205322266, uma_loss is 13.958377838134766
+100%|██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:07<00:00,  1.78it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 1/1 [00:01<00:00,  1.78s/it]
+loss is 28.06588363647461, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.49094009399414, uma_loss is 13.574943542480469
+loss is 26.359411239624023, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 14.190498352050781, uma_loss is 12.168912887573242
+loss is 25.555007934570312, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.853717803955078, uma_loss is 10.701290130615234
+loss is 23.332792282104492, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.90496826171875, uma_loss is 9.427824020385742
+loss is 22.327219009399414, acc1 is 0.09765625, acc5 is 0.48828125, cma_loss is 13.902175903320312, uma_loss is 8.425043106079102
+loss is 21.94820785522461, acc1 is 0.1953125, acc5 is 0.537109375, cma_loss is 13.943168640136719, uma_loss is 8.00503921508789
+loss is 21.55521583557129, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 13.917083740234375, uma_loss is 7.638132095336914
+loss is 21.16024398803711, acc1 is 0.048828125, acc5 is 0.634765625, cma_loss is 13.884963989257812, uma_loss is 7.2752790451049805
+loss is 20.84285545349121, acc1 is 0.1953125, acc5 is 0.5859375, cma_loss is 13.872638702392578, uma_loss is 6.970216751098633
+loss is 20.367389678955078, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 13.872039794921875, uma_loss is 6.4953508377075195
+loss is 19.922298431396484, acc1 is 0.1953125, acc5 is 0.830078125, cma_loss is 13.871623992919922, uma_loss is 6.050673484802246
+loss is 19.704853057861328, acc1 is 0.09765625, acc5 is 0.390625, cma_loss is 13.874710083007812, uma_loss is 5.830142021179199
+start validation
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 2/2 [00:00<00:00, 80.51it/s]
+0 epoch loss is 2.8478646232968283,                                    acc1 is 0.1201923076923077, acc5 is 0.5446213942307693
+***********************************
+zeroshot classification set is I313_I314
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:01<00:00,  3.96it/s]
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 6/6 [00:00<00:00, 163.59it/s]
+-----------------------------------
+The average AUROC is 68.9401
+The AUROC of I313 is 56.40
+The AUROC of I314 is 81.48
+-----------------------------------
+The average Sensitivity is 94.4444
+The Sensitivity of I313 is 88.89
+The Sensitivity of I314 is 100.00
+-----------------------------------
+The average Specificity is 55.2045
+The Specificity of I313 is 41.26
+The Specificity of I314 is 69.15
+-----------------------------------
+The average Youden Index is 49.6489
+The Youden Index of I313 is 30.14
+The Youden Index of I314 is 69.15
+***********************************
+***********************************
+zeroshot classification set is I_num_2
+  0%|                                                                                                                                                                                    | 0/6 [00:00<?, ?it/s]
+  0%|                                                                                                                                                                                   | 0/51 [00:15<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+    ddp_main()
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+    trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 219, in train_w_TextEmb
+    zeroshot_eval(model=self.model,
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 146, in zeroshot_eval
+    pred = get_ecg_emd(model.module, test_dataloader, zeroshot_weights, device=device, softmax_eval=True)
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 66, in get_ecg_emd
+    for i, (ecg, target) in enumerate(tqdm(loader)):
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+    for obj in iterable:
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+    data = self._next_data()
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+    return self._process_data(data)
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+    data.reraise()
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/_utils.py", line 706, in reraise
+    raise exception
+UnboundLocalError: Caught UnboundLocalError in DataLoader worker process 0.
+Original Traceback (most recent call last):
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+    data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+    data = [self.dataset[idx] for idx in possibly_batched_index]
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../finetune/finetune_dataset.py", line 80, in __getitem__
+    return ecg, target
+UnboundLocalError: local variable 'ecg' referenced before assignment
+
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+[rank0]:     ddp_main()
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+[rank0]:     trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 219, in train_w_TextEmb
+[rank0]:     zeroshot_eval(model=self.model,
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 146, in zeroshot_eval
+[rank0]:     pred = get_ecg_emd(model.module, test_dataloader, zeroshot_weights, device=device, softmax_eval=True)
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/zeroshot_val.py", line 66, in get_ecg_emd
+[rank0]:     for i, (ecg, target) in enumerate(tqdm(loader)):
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/tqdm/std.py", line 1181, in __iter__
+[rank0]:     for obj in iterable:
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 630, in __next__
+[rank0]:     data = self._next_data()
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1344, in _next_data
+[rank0]:     return self._process_data(data)
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/dataloader.py", line 1370, in _process_data
+[rank0]:     data.reraise()
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/_utils.py", line 706, in reraise
+[rank0]:     raise exception
+[rank0]: UnboundLocalError: Caught UnboundLocalError in DataLoader worker process 0.
+[rank0]: Original Traceback (most recent call last):
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/_utils/worker.py", line 309, in _worker_loop
+[rank0]:     data = fetcher.fetch(index)  # type: ignore[possibly-undefined]
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in fetch
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:   File "/home/lijun/anaconda3/envs/ecg/lib/python3.10/site-packages/torch/utils/data/_utils/fetch.py", line 52, in <listcomp>
+[rank0]:     data = [self.dataset[idx] for idx in possibly_batched_index]
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../finetune/finetune_dataset.py", line 80, in __getitem__
+[rank0]:     return ecg, target
+[rank0]: UnboundLocalError: local variable 'ecg' referenced before assignment

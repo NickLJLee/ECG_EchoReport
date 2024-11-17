@@ -1,0 +1,56 @@
+network:
+  ecg_model: resnet18
+  # ecg_model: vit_tiny
+  num_leads: 1
+  ### this part does not control builder/trainer
+  text_model: ncbi/MedCPT-Query-Encoder
+  free_layers: 6 # set 12 to freeze all layer in bert
+  feature_dim: 768
+
+  projection_head:
+    mlp_hidden_size: 256
+    projection_size: 256
+  ###
+
+dataset:
+  dataset_name: 'mimic'
+  data_path: 'your_path/' # add your image file path here
+
+# params for trainer
+trainer:
+  batch_size: 1024
+  val_batch_size: 512
+  checkpoint_interval: 1
+  max_epochs: 100
+  num_workers: 8
+
+optimizer:
+  params:
+    lr: 1.0e-3
+    weight_decay: 1.0e-8
+
+# params for zeroshot eval
+zeroshot:
+  prompt_type: 'CKEPE'
+  prompt_dict: '/data1/1shared/lijun/ecg/ECG-EchoReport/zeroshot/CKEPE_prompt.json'
+  batch_size: 256
+  num_workers: 8
+  meta_data_path: '/hot_data/lijun/data/mimic-iv-ecg-diagnostic-electrocardiogram-matched-subset-1.0/'
+  meta_split_path: '/data1/1shared/lijun/ecg/ECG-EchoReport/finetune/data_split/'
+  
+  test_sets:
+    I313_I314:
+      data_path: ''
+      split_path: 'I313_I314.csv'
+
+    I_num_2:
+      data_path: ''
+      split_path: 'I_num_2.csv'
+
+    xinbaojiye_ECG:
+      data_path: ''
+      split_path: 'xinbaojiye_ECG.csv'
+
+
+# your model name
+wandb_name: 'None'

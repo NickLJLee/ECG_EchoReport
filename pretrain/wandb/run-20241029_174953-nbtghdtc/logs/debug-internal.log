@@ -1,0 +1,14 @@
+{"time":"2024-10-29T17:49:53.49091116+08:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-10-29T17:49:53.490926677+08:00","level":"INFO","msg":"created symlink","path":"/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/wandb/run-20241029_174953-nbtghdtc/logs/debug-core.log"}
+{"time":"2024-10-29T17:49:53.512377076+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-29T17:49:53.517506901+08:00","level":"INFO","msg":"created new stream","id":"nbtghdtc"}
+{"time":"2024-10-29T17:49:53.517580426+08:00","level":"INFO","msg":"stream: started","id":"nbtghdtc"}
+{"time":"2024-10-29T17:49:53.517627996+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"nbtghdtc"}}
+{"time":"2024-10-29T17:49:53.517633688+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"nbtghdtc"}}
+{"time":"2024-10-29T17:49:53.517598903+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"nbtghdtc"}}
+{"time":"2024-10-29T17:49:54.229193964+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-29T17:49:54.231151063+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-29T17:49:57.790336549+08:00","level":"INFO","msg":"stream: closing","id":"nbtghdtc"}
+{"time":"2024-10-29T17:49:57.790397336+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-29T17:49:57.792801751+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-29T17:49:59.248541013+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}

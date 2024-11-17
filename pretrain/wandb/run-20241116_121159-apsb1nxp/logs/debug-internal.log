@@ -1,0 +1,13 @@
+{"time":"2024-11-16T12:11:59.188706298+08:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-11-16T12:11:59.188750308+08:00","level":"INFO","msg":"created symlink","path":"/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/wandb/run-20241116_121159-apsb1nxp/logs/debug-core.log"}
+{"time":"2024-11-16T12:11:59.303448049+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-11-16T12:11:59.31168073+08:00","level":"INFO","msg":"created new stream","id":"apsb1nxp"}
+{"time":"2024-11-16T12:11:59.311752141+08:00","level":"INFO","msg":"stream: started","id":"apsb1nxp"}
+{"time":"2024-11-16T12:11:59.311818397+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"apsb1nxp"}}
+{"time":"2024-11-16T12:11:59.311848932+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"apsb1nxp"}}
+{"time":"2024-11-16T12:11:59.311820691+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"apsb1nxp"}}
+{"time":"2024-11-16T12:12:00.746450939+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-11-16T12:12:00.748326808+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-16T12:12:04.48033875+08:00","level":"INFO","msg":"stream: closing","id":"apsb1nxp"}
+{"time":"2024-11-16T12:12:04.480369929+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-16T12:12:04.482653077+08:00","level":"INFO","msg":"Stopped system monitor"}

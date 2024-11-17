@@ -1,0 +1,19 @@
+{"time":"2024-10-29T18:03:39.713967719+08:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-10-29T18:03:39.713984147+08:00","level":"INFO","msg":"created symlink","path":"/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/wandb/run-20241029_180339-985m2m2k/logs/debug-core.log"}
+{"time":"2024-10-29T18:03:39.735615902+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-10-29T18:03:39.738555528+08:00","level":"INFO","msg":"created new stream","id":"985m2m2k"}
+{"time":"2024-10-29T18:03:39.738585019+08:00","level":"INFO","msg":"stream: started","id":"985m2m2k"}
+{"time":"2024-10-29T18:03:39.738629437+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"985m2m2k"}}
+{"time":"2024-10-29T18:03:39.738605664+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"985m2m2k"}}
+{"time":"2024-10-29T18:03:39.738626006+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"985m2m2k"}}
+{"time":"2024-10-29T18:03:40.325967523+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-10-29T18:03:40.327595465+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-10-29T18:06:21.530004048+08:00","level":"INFO","msg":"stream: closing","id":"985m2m2k"}
+{"time":"2024-10-29T18:06:21.530079447+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-10-29T18:06:21.532774401+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-10-29T18:06:25.30188802+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-10-29T18:06:26.532915385+08:00","level":"ERROR","msg":"monitor: gpu: timeout waiting for process to exit"}
+{"time":"2024-10-29T18:06:50.456879643+08:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"985m2m2k"}}
+{"time":"2024-10-29T18:06:50.456993943+08:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"985m2m2k"}}
+{"time":"2024-10-29T18:06:50.45696439+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"985m2m2k"}}
+{"time":"2024-10-29T18:06:50.457127941+08:00","level":"INFO","msg":"stream: closed","id":"985m2m2k"}

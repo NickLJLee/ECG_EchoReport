@@ -1,0 +1,47 @@
+directory "../checkpoints/" existing for save checkpoint!
+#########################################
+Be patient..., checking checkpoint now...
+Start training from 0 epoch
+#########################################
+training start!
+/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:91: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  scaler = GradScaler()
+  0%|                                                                                                                                                                                                                                                | 0/21 [00:00<?, ?it/s]/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py:117: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with autocast():                                                                                                                                                                                                                                   | 0/13 [00:00<?, ?it/s]
+loss is 27.88440704345703, acc1 is 0.146484375, acc5 is 0.5859375, cma_loss is 13.926029205322266, uma_loss is 13.958377838134766
+100%|███████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:07<00:00,  1.84it/s]
+0it [00:00, ?it/s]██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████| 13/13 [00:06<00:00,  3.57it/s]
+loss is 28.065826416015625, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.490901947021484, uma_loss is 13.57492446899414
+loss is 26.35981559753418, acc1 is 0.09765625, acc5 is 0.439453125, cma_loss is 14.190544128417969, uma_loss is 12.169271469116211
+loss is 25.556045532226562, acc1 is 0.09765625, acc5 is 0.537109375, cma_loss is 14.853912353515625, uma_loss is 10.702133178710938
+loss is 23.33360481262207, acc1 is 0.09765625, acc5 is 0.5859375, cma_loss is 13.905075073242188, uma_loss is 9.428529739379883
+loss is 22.327585220336914, acc1 is 0.09765625, acc5 is 0.48828125, cma_loss is 13.902385711669922, uma_loss is 8.425199508666992
+loss is 21.94829750061035, acc1 is 0.1953125, acc5 is 0.537109375, cma_loss is 13.943004608154297, uma_loss is 8.005292892456055
+loss is 21.555187225341797, acc1 is 0.09765625, acc5 is 0.5859375, cma_loss is 13.917133331298828, uma_loss is 7.638053894042969
+loss is 21.160781860351562, acc1 is 0.048828125, acc5 is 0.68359375, cma_loss is 13.884788513183594, uma_loss is 7.275993347167969
+loss is 20.843143463134766, acc1 is 0.1953125, acc5 is 0.5859375, cma_loss is 13.872764587402344, uma_loss is 6.970378875732422
+loss is 20.367252349853516, acc1 is 0.09765625, acc5 is 0.341796875, cma_loss is 13.871883392333984, uma_loss is 6.495368003845215
+loss is 19.921772003173828, acc1 is 0.1953125, acc5 is 0.830078125, cma_loss is 13.871532440185547, uma_loss is 6.050239562988281
+loss is 19.70659065246582, acc1 is 0.048828125, acc5 is 0.390625, cma_loss is 13.874717712402344, uma_loss is 5.831872940063477
+start validation
+  0%|                                                                                                                                                                                                                                                | 0/21 [00:07<?, ?it/s]
+Traceback (most recent call last):
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+    ddp_main()
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+    trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 187, in train_w_TextEmb
+    val_log = self.val(val_loader)
+  File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 338, in val
+    val_cma_loss = val_cma_loss/len(val_epoch_acc1)
+ZeroDivisionError: division by zero
+[rank0]: Traceback (most recent call last):
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 105, in <module>
+[rank0]:     ddp_main()
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/main.py", line 102, in ddp_main
+[rank0]:     trainer.train_w_TextEmb(train_dataset, val_dataset, config['zeroshot'])
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 187, in train_w_TextEmb
+[rank0]:     val_log = self.val(val_loader)
+[rank0]:   File "/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/../utils/utils_trainer.py", line 338, in val
+[rank0]:     val_cma_loss = val_cma_loss/len(val_epoch_acc1)
+[rank0]: ZeroDivisionError: division by zero

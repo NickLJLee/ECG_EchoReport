@@ -1,0 +1,19 @@
+{"time":"2024-11-05T22:54:40.40079773+08:00","level":"INFO","msg":"using version","core version":"0.18.2"}
+{"time":"2024-11-05T22:54:40.400810122+08:00","level":"INFO","msg":"created symlink","path":"/data1/1shared/lijun/ecg/ECG-EchoReport/pretrain/wandb/run-20241105_225440-xdivgjdn/logs/debug-core.log"}
+{"time":"2024-11-05T22:54:40.461241466+08:00","level":"ERROR","msg":"dialing: google: could not find default credentials. See https://cloud.google.com/docs/authentication/external/set-up-adc for more information"}
+{"time":"2024-11-05T22:54:40.464184315+08:00","level":"INFO","msg":"created new stream","id":"xdivgjdn"}
+{"time":"2024-11-05T22:54:40.464224161+08:00","level":"INFO","msg":"stream: started","id":"xdivgjdn"}
+{"time":"2024-11-05T22:54:40.464246764+08:00","level":"INFO","msg":"writer: Do: started","stream_id":{"value":"xdivgjdn"}}
+{"time":"2024-11-05T22:54:40.464260762+08:00","level":"INFO","msg":"handler: started","stream_id":{"value":"xdivgjdn"}}
+{"time":"2024-11-05T22:54:40.46427048+08:00","level":"INFO","msg":"sender: started","stream_id":{"value":"xdivgjdn"}}
+{"time":"2024-11-05T22:54:41.819724268+08:00","level":"INFO","msg":"wandb-core","!BADKEY":null}
+{"time":"2024-11-05T22:54:41.82133236+08:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2024-11-05T23:05:32.446396404+08:00","level":"INFO","msg":"stream: closing","id":"xdivgjdn"}
+{"time":"2024-11-05T23:05:32.446466287+08:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2024-11-05T23:05:32.449918441+08:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2024-11-05T23:05:37.450322926+08:00","level":"ERROR","msg":"monitor: gpu: timeout waiting for process to exit"}
+{"time":"2024-11-05T23:05:37.743634702+08:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2024-11-05T23:05:40.541025863+08:00","level":"INFO","msg":"handler: closed","stream_id":{"value":"xdivgjdn"}}
+{"time":"2024-11-05T23:05:40.541131471+08:00","level":"INFO","msg":"writer: Close: closed","stream_id":{"value":"xdivgjdn"}}
+{"time":"2024-11-05T23:05:40.541152221+08:00","level":"INFO","msg":"sender: closed","stream_id":{"value":"xdivgjdn"}}
+{"time":"2024-11-05T23:05:40.542286681+08:00","level":"INFO","msg":"stream: closed","id":"xdivgjdn"}
